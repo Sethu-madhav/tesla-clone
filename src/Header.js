@@ -21,10 +21,10 @@ function Header({isMenuOpen, setIsMenuOpen}) {
             <Link to='/'>Roadster</Link>
         </div>
         <div className="header__right">
-            <Link to='/' className={isMenuOpen && 'header__link--hidden'}>Shop</Link>
-            <Link to='/login' className={isMenuOpen && 'header__link--hidden'}>Tesla Account</Link>
+            <Link to='/' className={isMenuOpen ? 'header__link--hidden' : undefined}>Shop</Link>
+            <Link to='/login' className={isMenuOpen ? 'header__link--hidden' : undefined}>Tesla Account</Link>
             <div className="header__menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <CloseIcon/> : <MenuIcon/>}
+            {isMenuOpen ? <CloseIcon/>: <MenuIcon/>}
             </div>
         </div>
     </div>
